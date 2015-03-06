@@ -4,6 +4,9 @@ echo "========================="
 
 cd /home/vagrant
 
+sudo apt-get update
+sudp apt-get install -y curl
+
 echo "Installing mongodb..."
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
@@ -15,7 +18,7 @@ echo "Adding node.js repository..."
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 
 echo "Installing apps..."
-sudo apt-get install -y emacs24-nox unzip bash nodejs git
+sudo apt-get install -y unzip bash nodejs git
 sudo npm install -g npm grunt-cli
 
 echo "Installing liquid prompt..."
