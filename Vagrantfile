@@ -9,6 +9,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
 
+  config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ubuntu/trusty64"
   config.vm.provision :shell, path: "bootstrap.sh"
@@ -26,7 +28,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "11.12.13.14"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -52,7 +54,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   vb.gui = true
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
-    vb.name = "ioreto"
+    vb.name = "shnere"
     vb.memory = 1024
       # vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
