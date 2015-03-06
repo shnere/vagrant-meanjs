@@ -22,7 +22,9 @@ sudo apt-get install -y unzip bash nodejs git
 sudo npm install -g npm grunt-cli
 
 echo "Installing Oh My Zsh..."
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+sudo apt-get install -y zsh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sudo sh
+chsh -s `which zsh`
 
 echo "Installing Yeoman & generator..."
 sudo npm install -g yo generator-meanjs
