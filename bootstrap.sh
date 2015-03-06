@@ -21,9 +21,8 @@ echo "Installing apps..."
 sudo apt-get install -y unzip bash nodejs git
 sudo npm install -g npm grunt-cli
 
-echo "Installing liquid prompt..."
-git clone https://github.com/nojhan/liquidprompt.git
-echo "source ~/liquidprompt/liquidprompt" >> .bashrc
+echo "Installing Oh My Zsh..."
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 
 echo "Installing Yeoman & generator..."
 sudo npm install -g yo generator-meanjs
